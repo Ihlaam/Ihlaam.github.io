@@ -3,15 +3,17 @@ I am a third year Bsc IT student with a major in Business. This collaboration is
 I have experience in C++, Java and with all stages of the development cycle for dynamic web projects. Well-versed in numerous programming languages including HTML5, PHP, OOP, CSS, MySQL.  Recently I have been finding some interest in database and network security, which I hope to learn more about 
 
 ## Work Experience
-Private Tutor – Tut Extra 				2019-Present
+- Private Tutor – Tut Extra (2019-Present)
 •	Tutoring university students in computer science module
-Cocktail Server – Ara Vista				2019
+
+- Cocktail Server – Ara Vista (2019)
 •	Mixing and serving cocktails and beverages to customers 
 •	Working with point of sale and daily stock taking
-Sales Consultant – 47 On Bell 				2018-2019
+
+- Sales Consultant – 47 On Bell (2018-2019)
 •	 Communicate with customers to provide products based on their needs
 •	Accepted and processed customer payments in cash and credit cards
-Secretary – Pivot Tutors 				2018
+- Secretary – Pivot Tutors (2018)
 •	Creating posters and advertising company 
 •	Processing and collection of payments from students 
 •	Creating an automated invoice system to send receipt of payment specialized for company to students through email 
