@@ -1,37 +1,45 @@
-## Welcome to GitHub Pages
+## About Me
+I am a third year Bsc IT student with a major in Business. This collaboration is something I find very interesting and necessary in the larger contect of working and developing IT solutions for companies. This collaboration gives me a strong background in project management and customer relations.
+I have experience in C++, Java and with all stages of the development cycle for dynamic web projects. Well-versed in numerous programming languages including HTML5, PHP, OOP, CSS, MySQL.  Recently I have been finding some interest in database and network security, which I hope to learn more about 
 
-You can use the [editor on GitHub](https://github.com/Ihlaam/Ihlaam.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## Work Experience
+Private Tutor – Tut Extra 				2019-Present
+•	Tutoring university students in computer science module
+Cocktail Server – Ara Vista				2019
+•	Mixing and serving cocktails and beverages to customers 
+•	Working with point of sale and daily stock taking
+Sales Consultant – 47 On Bell 				2018-2019
+•	 Communicate with customers to provide products based on their needs
+•	Accepted and processed customer payments in cash and credit cards
+Secretary – Pivot Tutors 				2018
+•	Creating posters and advertising company 
+•	Processing and collection of payments from students 
+•	Creating an automated invoice system to send receipt of payment specialized for company to students through email 
+•	Creating Google Forms for sign up 
+•	Creating and maintaining database for student detail
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Interests
+- Books
+I am a true bookworm and cannot possibly list all the books I love here, but these are some of my favourite currently
+•	Unthinkable – Helen Tompson
+•	The power of now – Ekhart Tholle
+•	The subtle art of not giving a f*ck – Mark Manson
+•	Harry Potter and the Deathly Hallows Part 1 – J.K Rowling
 
-### Markdown
+- Singing/Music
+- Community outreach
+- Yoga
+- Cricket
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Technical Ability
+- Microsoft Office 
+- C++
+- Java
+- HTML5
+- Javascript
+- PHP
+- CSS
+- MySQL
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Ihlaam/Ihlaam.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
