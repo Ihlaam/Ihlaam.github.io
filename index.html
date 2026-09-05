@@ -1,541 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5BB8W2X');</script>
-  <!-- End Google Tag Manager -->
-  <link rel="icon" type="image/png" href="https://www.flaticon.com/free-animated-icon/world-creativity-and-innovation-day_15557658?term=brain&page=1&position=10&origin=search&related_id=15557658"/>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ihlaam Abrahams — Information Security Engineer</title>
+<meta name="description" content="Ihlaam Abrahams — Information Security Engineer based in Gauteng, South Africa, working remotely across security operations, governance and risk.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 
-  <title>Personal Portfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+<style>
+  :root{
+    --ground:#120f11;
+    --surface:rgba(229,164,203,0.055);
+    --surface-strong:rgba(229,164,203,0.1);
+    --line:rgba(233,180,200,0.16);
+    --ink:#f3ecec;
+    --muted:#b09aa4;
+    --faint:#7c6870;
+    --accent:#e5a4cb;
+    --accent-soft:rgba(229,164,203,0.22);
+    --accent-2:#dbabbe;
+    --accent-2-soft:rgba(219,171,190,0.16);
+    --font-display:'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-body:'Manrope', -apple-system, 'Segoe UI', sans-serif;
+    --font-mono:'IBM Plex Mono', 'SFMono-Regular', Menlo, monospace;
+  }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } *{ animation-duration:0.001ms !important; transition-duration:0.001ms !important; } }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  body{
+    margin:0;
+    background:var(--ground);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  a{ color:inherit; }
+  ::selection{ background:var(--accent-soft); color:var(--ink); }
 
+  .noise{
+    position:fixed; inset:0; pointer-events:none; z-index:1; opacity:0.5;
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(229,164,203,0.14), transparent 40%),
+      radial-gradient(circle at 88% 18%, rgba(219,171,190,0.12), transparent 38%),
+      radial-gradient(circle at 50% 90%, rgba(229,164,203,0.08), transparent 45%);
+  }
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169007209-3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  /* ---------- spine nav ---------- */
+  .spine{
+    position:fixed; left:0; top:0; bottom:0; width:64px;
+    display:flex; flex-direction:column; align-items:center; justify-content:space-between;
+    padding:28px 0; z-index:40; border-right:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(10,15,12,0.6), rgba(10,15,12,0.2));
+    backdrop-filter:blur(6px);
+  }
+  .spine .mark{
+    width:34px; height:34px; border:1px solid var(--line); border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-display); font-size:15px; color:var(--accent);
+  }
+  .spine nav{ display:flex; flex-direction:column; gap:26px; }
+  .spine nav a{
+    writing-mode:vertical-rl; text-orientation:mixed; transform:rotate(180deg);
+    font-family:var(--font-mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--faint); text-decoration:none; padding:4px 0; border-left:1px solid transparent;
+    transition:color .2s ease;
+  }
+  .spine nav a:hover, .spine nav a:focus-visible{ color:var(--accent); outline:none; }
+  .spine .socials{ display:flex; flex-direction:column; gap:16px; }
+  .spine .socials a{ color:var(--faint); display:flex; }
+  .spine .socials a:hover, .spine .socials a:focus-visible{ color:var(--accent-2); outline:none; }
+  .spine .socials svg{ width:16px; height:16px; }
 
-    gtag('config', 'UA-169007209-3');
-  </script>
+  main{ margin-left:64px; position:relative; z-index:2; }
+  section{ padding:min(14vw,140px) clamp(24px,6vw,96px); max-width:1180px; }
+  .eyebrow{
+    font-family:var(--font-mono); font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase;
+    color:var(--accent); display:flex; align-items:center; gap:10px; margin-bottom:22px;
+  }
+  .eyebrow::before{ content:''; width:22px; height:1px; background:var(--accent); display:inline-block; }
+  h2.section-title{
+    font-family:var(--font-display); font-weight:500; font-size:clamp(28px,3.4vw,42px);
+    margin:0 0 48px; text-wrap:balance; color:var(--ink);
+  }
 
+  /* ---------- hero ---------- */
+  .hero{ min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding-top:120px; padding-bottom:80px; }
+  .hero .kicker{ font-family:var(--font-mono); font-size:12.5px; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); margin-bottom:28px; }
+  .hero h1{
+    font-family:var(--font-display); font-weight:400; font-size:clamp(44px,7.4vw,96px);
+    line-height:0.98; margin:0; text-wrap:balance; letter-spacing:-0.01em;
+  }
+  .hero h1 em{
+    font-style:italic; font-weight:300;
+    background:linear-gradient(100deg,var(--accent) 10%,var(--accent-2) 90%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .hero .role-line{
+    margin-top:26px; font-family:var(--font-mono); font-size:15px; color:var(--muted);
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  }
+  .hero .role-line .dot{ width:6px; height:6px; border-radius:50%; background:var(--accent); box-shadow:0 0 10px var(--accent); }
+  .hero .actions{ margin-top:44px; display:flex; gap:16px; flex-wrap:wrap; }
+  .btn{
+    font-family:var(--font-mono); font-size:12.5px; letter-spacing:0.08em; text-transform:uppercase;
+    padding:14px 24px; border-radius:2px; text-decoration:none; display:inline-flex; align-items:center; gap:10px;
+    border:1px solid var(--line); transition:border-color .2s ease, background .2s ease, color .2s ease;
+  }
+  .btn.primary{ background:var(--accent); color:var(--ground); border-color:var(--accent); font-weight:600; }
+  .btn.primary:hover{ background:#f0bede; }
+  .btn.ghost{ color:var(--ink); }
+  .btn.ghost:hover{ border-color:var(--accent); color:var(--accent); }
 
+  /* ---------- circuit-vine divider ---------- */
+  .vine{ width:100%; height:44px; opacity:0.55; color:var(--accent); }
+  .vine-wrap{ padding:0 clamp(24px,6vw,96px); }
 
-  <!-- =======================================================
-  * Template Name: Personal - v2.1.0
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  /* ---------- about ---------- */
+  .about-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:64px; align-items:start; }
+  .about-grid p{ color:var(--muted); font-size:16.5px; max-width:56ch; }
+  .about-grid p + p{ margin-top:20px; }
+  .about-grid .cap{ color:var(--ink); }
+  .field-note{
+    border:1px solid var(--line); background:var(--surface); border-radius:4px; padding:26px 28px;
+  }
+  .field-note h3{ font-family:var(--font-mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent-2); margin:0 0 16px; }
+  .field-note ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px; }
+  .field-note li{ font-size:14.5px; color:var(--muted); display:flex; justify-content:space-between; gap:12px; border-bottom:1px dashed var(--line); padding-bottom:12px; }
+  .field-note li:last-child{ border-bottom:none; padding-bottom:0; }
+  .field-note li b{ color:var(--ink); font-weight:500; }
+  .field-note li a{ color:var(--ink); font-weight:500; text-decoration:none; border-bottom:1px solid var(--faint); transition:color .2s ease, border-color .2s ease; }
+  .field-note li a:hover, .field-note li a:focus-visible{ color:var(--accent); border-color:var(--accent); outline:none; }
+
+  /* ---------- skills ---------- */
+  .skills-cols{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+  .skill-card{
+    border:1px solid var(--line); background:var(--surface); border-radius:6px; padding:26px 24px 24px;
+    position:relative; overflow:hidden;
+  }
+  .skill-card::before{
+    content:''; position:absolute; top:-40%; right:-30%; width:160px; height:160px; border-radius:50%;
+    background:radial-gradient(circle, var(--card-glow,var(--accent-soft)), transparent 70%); pointer-events:none;
+  }
+  .skill-card h4{ font-family:var(--font-display); font-weight:500; font-size:18px; margin:0 0 6px; position:relative; }
+  .skill-card .sub{ font-family:var(--font-mono); font-size:10.5px; letter-spacing:0.08em; text-transform:uppercase; color:var(--faint); margin-bottom:18px; position:relative; }
+  .tag-row{ display:flex; flex-wrap:wrap; gap:8px; position:relative; }
+  .tag{
+    font-family:var(--font-mono); font-size:12px; padding:6px 10px; border-radius:3px;
+    background:var(--surface-strong); border:1px solid var(--line); color:var(--muted); line-height:1;
+  }
+
+  .non-tech{ margin-top:28px; display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+  .non-card{ border:1px solid var(--line); border-radius:6px; padding:22px 24px; background:var(--surface); }
+  .non-card h5{ margin:0 0 8px; font-family:var(--font-display); font-size:16px; font-weight:500; color:var(--accent-2); }
+  .non-card p{ margin:0; color:var(--muted); font-size:14px; }
+
+  /* ---------- experience timeline ---------- */
+  .timeline{ display:flex; flex-direction:column; }
+  .role{
+    display:grid; grid-template-columns:200px 1fr; gap:32px; padding:34px 0; border-top:1px solid var(--line);
+  }
+  .role:last-child{ border-bottom:1px solid var(--line); }
+  .role .when{ font-family:var(--font-mono); font-size:12px; color:var(--faint); padding-top:4px; display:flex; flex-direction:column; align-items:flex-start; gap:12px; }
+  .role .when .status{ display:inline-flex; align-items:center; gap:5px; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); }
+  .role h4{ font-family:var(--font-display); font-size:22px; font-weight:500; margin:0; }
+  .role h4 span{ color:var(--muted); font-weight:400; font-size:16px; font-family:var(--font-body); }
+  .role .place{ font-family:var(--font-mono); font-size:12px; color:var(--muted); margin:6px 0 16px; text-transform:uppercase; letter-spacing:0.04em; }
+  .role ul{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:10px; }
+  .role li{ position:relative; padding-left:20px; color:var(--muted); font-size:14.5px; line-height:1.65; }
+  .role li::before{ content:''; position:absolute; left:0; top:9px; width:8px; height:1px; background:var(--accent); }
+
+  /* ---------- education & certs ---------- */
+  .edu-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; }
+  .edu-item{ padding:22px 0; border-top:1px solid var(--line); }
+  .edu-item:first-of-type{ border-top:none; padding-top:0; }
+  .edu-item h4{ font-family:var(--font-display); font-size:18px; font-weight:500; margin:0 0 4px; }
+  .edu-item .meta{ font-family:var(--font-mono); font-size:11.5px; color:var(--faint); text-transform:uppercase; letter-spacing:0.04em; }
+  .edu-item .honors{ margin-top:8px; font-size:13.5px; color:var(--accent-2); }
+  .cert-list{ display:flex; flex-direction:column; gap:0; }
+  .cert{
+    display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 20px;
+    border:1px solid var(--line); border-radius:5px; background:var(--surface); margin-bottom:12px;
+  }
+  .cert .name{ font-size:14.5px; color:var(--ink); }
+  .cert .issuer{ font-family:var(--font-mono); font-size:10.5px; color:var(--faint); text-transform:uppercase; letter-spacing:0.06em; margin-top:4px; }
+  .cert .check{ color:var(--accent); flex-shrink:0; }
+
+  /* ---------- contact / footer ---------- */
+  footer{
+    padding:min(12vw,120px) clamp(24px,6vw,96px) 60px; margin-left:64px; position:relative; z-index:2;
+    border-top:1px solid var(--line);
+  }
+  footer .big{
+    font-family:var(--font-display); font-weight:400; font-size:clamp(34px,6vw,72px); line-height:1.05; text-wrap:balance;
+  }
+  footer .big a{ text-decoration:none; border-bottom:1px solid var(--faint); transition:border-color .2s ease, color .2s ease; }
+  footer .big a:hover{ color:var(--accent); border-color:var(--accent); }
+  .contact-grid{ margin-top:56px; display:flex; gap:56px; flex-wrap:wrap; }
+  .contact-grid .c-label{ font-family:var(--font-mono); font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--faint); margin-bottom:10px; }
+  .contact-grid .c-val{ font-size:14.5px; color:var(--ink); }
+  .contact-grid a.c-val{ text-decoration:none; }
+  .contact-grid a.c-val:hover{ color:var(--accent); }
+  footer .fine{ margin-top:70px; font-family:var(--font-mono); font-size:11px; color:var(--faint); }
+
+  @media (max-width:860px){
+    .spine{ display:none; }
+    main, footer{ margin-left:0; }
+    .about-grid, .skills-cols, .non-tech, .edu-grid{ grid-template-columns:1fr; }
+    .role{ grid-template-columns:1fr; gap:10px; }
+  }
+</style>
 </head>
-
 <body>
-  
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BB8W2X"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <!-- ======= Header ======= -->
-  <header id="header" class="header-tops">
 
-    <div class="container">
+<div class="noise"></div>
 
-      <h1><a href="index.html">Ihlaam Abrahams</a></h1>
-      <h2 style="color:#fff"> <span class="typing" style="color:#FCA311"></span></h2>
-      <nav class="nav-menu d-none d-lg-block">
+<div class="spine">
+  <div class="mark">IA</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="socials">
+    <a href="https://www.linkedin.com/in/ihlaam-abrahams-2191741a5" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="10" x2="8" y2="17"/><circle cx="8" cy="6.7" r="0.4" fill="currentColor"/><path d="M12 17v-4.2c0-1.4 1-2.2 2.2-2.2 1.2 0 1.8.8 1.8 2.2V17"/></svg></a>
+    <a href="https://www.github.com/Ihlaam" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-1.99 1.03-2.7-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.9-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.71 1.03 1.6 1.03 2.7 0 3.85-2.35 4.7-4.58 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+    <a href="https://medium.com/@ihlaamabr" target="_blank" rel="noopener" aria-label="Medium"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6.5" cy="12" r="3.6"/><ellipse cx="15" cy="12" rx="2.2" ry="3.6"/><ellipse cx="20.2" cy="12" rx="1" ry="3.4"/></svg></a>
+  </div>
+</div>
+
+<main>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="top">
+    <div class="kicker">Gauteng, South Africa — Remote</div>
+    <h1>Security built firsthand.<br>Audited from <em>both sides</em>.</h1>
+    <div class="role-line">
+      <span class="dot"></span> Information Security Engineer
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="#contact">Get in touch</a>
+    </div>
+  </section>
+
+  <div class="vine-wrap">
+    <svg class="vine" viewBox="0 0 1200 44" preserveAspectRatio="none">
+      <line x1="0" y1="22" x2="1200" y2="22" stroke="currentColor" stroke-width="1" stroke-dasharray="2 6" opacity="0.5"/>
+      <g fill="none" stroke="currentColor" stroke-width="1.3">
+        <circle cx="60" cy="22" r="3" fill="currentColor" stroke="none"/>
+        <circle cx="300" cy="22" r="3" fill="currentColor" stroke="none"/>
+        <circle cx="900" cy="22" r="3" fill="currentColor" stroke="none"/>
+        <circle cx="1140" cy="22" r="3" fill="currentColor" stroke="none"/>
+        <path d="M300 22c0-10 8-16 18-16s16 6 16 14-8 12-16 8" />
+        <path d="M600 22c-14-4-22 4-22 14s10 14 20 8c8-5 8-14 2-18-8-6-18 0-18 8" opacity="0.85"/>
+        <path d="M900 22c0 10-9 15-18 12" />
+      </g>
+    </svg>
+  </div>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about">
+    <div class="eyebrow">01 — About</div>
+    <div class="about-grid">
+      <div>
+        <p class="cap">I'm drawn to the parts of security where technical depth meets business risk — not deep in the weeds of pure engineering, and not stuck in compliance paperwork, but the layer that connects the two.</p>
+        <p>I can build most of what a security team needs, and I've also sat in the auditor's seat — so I know what a review is looking for from both sides. Beyond any single title, I'm driven by building things that are genuinely secure and useful, and bringing people up along the way through mentorship and teaching, whether that's picking up a new tool at work or sitting in a classroom.</p>
+      </div>
+      <div class="field-note">
+        <h3>At a glance</h3>
         <ul>
-          <li class="active"><a href="#header"> <span>Home</span></a></li>
-          <li><a href="#about"><span>About</span></a></li>
-          <li><a href="#education"> <span>Education</span></a></li>
-          <li><a href="#experience"> <span>Experience</span></a></li>
-<!--          <li><a href="#projects"> <span>Projects</span></a></li>-->
-          <li><a href="#portfolio"> <span>Projects</span></a></li>
-          <li><a href="#skills"> <span>Skills</span></a></li>
-          <li><a href="assets/Laam Resume 2024.pdf" target="_blank"> <span>Resume</span></a></li>
-          <!-- <li><a href="#links"> <span>Resume & Links</span></a></li> -->
-          <li><a href="#contacts"> <span>Contact</span></a></li>
-
+          <li>Currently <b>Cybersecurity Engineer</b> at Takealot</li>
+          <li>Currently <b>Co-Founder / CISO</b> at <a href="https://intactline.co.za/page/" target="_blank" rel="noopener">Intact Line</a></li>
+          <li>Prior: <b>PwC</b> · <b>Deloitte</b></li>
+          <li>Studying <b>MSc CS</b>, blockchain security</li>
+          <li>Based in <b>Gauteng, South Africa</b> · GMT+2</li>
         </ul>
-      </nav><!-- .nav-menu -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about">
-
-    <!-- ======= About Me ======= -->
-    <div class="about-me container">
-
-      <div class="section-title">
-        <h2>About</h2>
       </div>
-      <div class="row">
-        <div class="col-lg-4" data-aos="fade-right">
-          <img src="assets/img/profile.png" width="150" height="150" class="img-fluid" alt="">
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <p>Dedicated and results-driven professional with a keen interest in cybersecurity, software engineering and artifical intelligence.
-             I am passionate about leveraging technology for societal impact, particularly in the educational domain.
-             I aim to contribute meaningfully to projects that drive innovation and secure digital landscapes.
-          </p>
-        </div>
-      </div>
-
-    </div><!-- End About Me -->
-
-    <!-- ======= Interests ======= -->
-    <div class="interests container">
-
-      <div class="section-title">
-        <h2>Interests</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3 col-md-4">
-          <div class="icon-box">
-            <i class="ri-shield-keyhole-line" style="color: #ffbb2c;"></i>
-            <h3>Cybersecurity</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i class="ri-code-box-line" style="color: #5578ff;"></i>
-            <h3>Software Engineering</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i class="ri-macbook-line" style="color: #e80368;"></i>
-            <h3>Artifical Intelligence</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-          <div class="icon-box">
-            <i class="ri-search-eye-line" style="color: #1c7d32;"></i>
-            <h3>Education</h3>
-          </div>
-        </div>
-      </div>
-
-    </div> <!-- End Interests -->
-    <!-- ======= Hobbies ======= -->
-    <div class="interests container">
-
-        <div class="section-title">
-            <h2>Hobbies</h2>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-3 col-md-4">
-                <div class="icon-box">
-                    <i class="ri-gamepad-line" style="color: #28a745;"></i>
-                    <h3>Gaming</h3>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4">
-                <div class="icon-box">
-                    <i class="ri-book-open-line" style="color: #f1081f;"></i>
-                    <h3>Reading</h3>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4">
-                <div class="icon-box">
-                    <i class="ri-newspaper-line" style="color: #47aeff;"></i>
-                    <h3>Writing</h3>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4">
-                <div class="icon-box">
-                    <i class="ri-run-line" style="color: #ffc107;"></i>
-                    <h3>Sport</h3>
-                </div>
-            </div>
-        </div>
-
-    </div><!-- End Hobbies -->
-  </section><!-- End About Section -->
-
-
-
-  <!-- ======= Education Section ======= -->
-  <section id="education" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Education</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-12" data-aos="fade-up" style="display: inline-block;">
-
-            <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-                <img src="assets/img/education/up_logo.png" class="img-fluid" alt="">
-                <p style="text-align:left;color:#fff;padding: 5px 10px;"><em>BSc Hons in Computer Science</em></p>
-                <h5 style="text-align:left;padding: 0px 10px;">January 2021 - November 2021</h5>
-                <h6 style="text-align:left;color:#fff;padding: 0px 10px;">Relevant Coursework</h6>
-                <ul style="text-align:left;color:#fff;">
-                  <li>Cybersecurity</li>
-                  <li>Digital Forensics</li>
-                  <li>Educational Software Development</li>
-                  <li>ICT Project Management</li>
-                </ul>
-              </div>
-
-
-            <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-              <img src="assets/img/education/up_logo.png" class="img-fluid" alt="">
-              <p style="text-align:left;color:#fff;padding: 5px 10px;"><em>BSc in Information and Knowledge Systems</em></p>
-              <h5 style="text-align:left;padding: 0px 10px;">January 2018 - November 2020</h5>
-              <h6 style="text-align:left;color:#fff;padding: 0px 10px;">Relevant Coursework</h6>
-              <ul style="text-align:left;color:#fff;">
-                <li>Software Development</li>
-                <li>Data Structures &amp; Algorithms</li>
-                <li>Security &amp; Networks</li>
-                <li>Software Architecture</li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-
-    <div class="portfolio">
-    <div class="container">
-      <div class="section-title">
-        <h2>Certifications</h2>
-      </div>
-
-      <div class="row portfolio-container" style="position: relative; height: 437.75px;">
-
-         <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 0px; top: 0px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/google_logo.png" height="100" width="200" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Cybersecurity</h4>
-              <div class="portfolio-links">
-                <a href="https://www.credly.com/badges/d7cdf36a-3d65-4bb6-a71d-0f73a3a59d3e/public_url" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-           </div>
-          </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 370px; top: 0px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/arcx_logo.png" height="100" width="200" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Threat Intelligence</h4>
-              <div class="portfolio-links">
-                <a href="https://arcx.io/verify-certificate?id=977fa2a129b65010f32a9e22d5fe5c78bf48296f&k=bbeb62643d5740f2878ed6da8cdda6fd" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    </div>
-
-  </section>
-  <!-- End Education Section -->
-
-
-
-  <!-- Start Experience Section -->
-
-  <section id="experience" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Experience</h2>
-      </div>
-      <div class="row">
-          <div class="col-lg-12" data-aos="fade-up">
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left; color:#FCA311">University of Sydney<br> </h4>
-                <h5 style="text-align:left;">March 2024 - Present</h5>
-                <p style="text-align:left;color:#fff"><em>Cybersecurity TA </em></p>
-                <ul style="text-align:left;">
-                  <li>Facilitate hands-on lab sessions for all students in applying theoretical knowledge to practical scenarios</li>
-                  <li>Lead and guide student discussions in groups across various cyber domains</li>
-                  <li>Evaluate and provide constructive feedback on student assignments, projects, and lab reports, ensuring adherence to grading criteria and promoting continuous improvement in student performance.</li>
-                </ul>
-              </div>
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left; color:#FCA311">PwC<br> </h4>
-                <h5 style="text-align:left;">June 2023 - March 2024</h5>
-                <p style="text-align:left;color:#fff"><em>IT Technology Consultant</em></p>
-                <ul style="text-align:left;">
-                  <li>Conduct risk assessments to determine the likelihood and impact of various threats.</li>
-                  <li>Perform security audits to assess the effectiveness of the organization's information security controls.</li>
-                  <li> Assess the organization's IT infrastructure, including networks, servers, and databases, for vulnerabilities and recommend fixes.</li>
-                </ul>
-              </div>
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left; color:#FCA311">Deloitte<br> </h4>
-                <h5 style="text-align:left;">June 2022 - June 2023</h5>
-                <p style="text-align:left;color:#fff"><em>SOC Analyst</em></p>
-                <ul style="text-align:left;">
-                  <li>Monitor, investigate, and mitigate threats in a 24/7 security operations centre</li>
-                  <li>Analyse threats and conduct log analysis using SIEM tools</li>
-                  <li>Provide real-time response to clients on mitigation procedures</li>
-                </ul>
-              </div>
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left; color:#FCA311">Accenture <br> </h4>
-                <h5 style="text-align:left;">June 2021 - July 2021</h5>
-                <p style="text-align:left;color:#fff"><em>Internship</em></p>
-                <ul style="text-align:left;">
-                  <li>Collaborate on a data analysis project using machine learning techniques and Power BI to analyze system performance</li>
-                  <li>Development and implementation of a bot using IBM Watson</li>
-                </ul>
-              </div>
-          </div>
-        </div>
     </div>
   </section>
 
-  <!-- End Experience Section -->
+  <!-- ================= SKILLS ================= -->
+  <section id="skills">
+    <div class="eyebrow">02 — Skills</div>
+    <h2 class="section-title">Fluent on the console.<br>Just as fluent in the boardroom.</h2>
 
-
-
-  <!-- Start Project Section -->
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Projects</h2>
+    <div class="skills-cols">
+      <div class="skill-card" style="--card-glow:var(--accent-soft)">
+        <h4>Security Operations</h4>
+        <div class="sub">Detection &amp; Response</div>
+        <div class="tag-row">
+          <span class="tag">Microsoft Sentinel</span><span class="tag">IBM QRadar</span>
+          <span class="tag">Graylog</span><span class="tag">Grafana</span>
+          <span class="tag">Velociraptor</span><span class="tag">OpenCTI</span>
+          <span class="tag">GoPhish</span><span class="tag">Digital Forensics</span>
+          <span class="tag">Pen Testing</span>
+        </div>
       </div>
+      <div class="skill-card" style="--card-glow:var(--accent-2-soft)">
+        <h4>Governance &amp; Risk</h4>
+        <div class="sub">Assurance &amp; Compliance</div>
+        <div class="tag-row">
+          <span class="tag">ISO 27001</span><span class="tag">SOC 2</span>
+          <span class="tag">ITGC</span><span class="tag">NIST CSF</span>
+          <span class="tag">POPIA (GDPR equiv.)</span><span class="tag">Vendor Assurance</span>
+          <span class="tag">Risk Registers</span><span class="tag">Eramba</span>
+        </div>
+      </div>
+      <div class="skill-card" style="--card-glow:var(--accent-soft)">
+        <h4>Build &amp; Automate</h4>
+        <div class="sub">Programming &amp; Infra</div>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">KQL</span>
+          <span class="tag">JavaScript</span><span class="tag">React Native</span>
+          <span class="tag">n8n</span><span class="tag">CI/CD</span>
+          <span class="tag">Azure</span><span class="tag">GCP</span>
+        </div>
+      </div>
+    </div>
 
-      <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">Software Development</li>
-            <li data-filter=".filter-project">Cybersecurity</li>
+    <div class="non-tech">
+      <div class="non-card">
+        <h5>Mentorship</h5>
+        <p>Guides two engineers and a sales consultant at Intact Line through regular one-on-one check-ins and reviews.</p>
+      </div>
+      <div class="non-card">
+        <h5>Executive communication</h5>
+        <p>Turns technical control gaps into risk reports audit committees act on, and has sat on the audit board defending evidence directly to external auditors.</p>
+      </div>
+      <div class="non-card">
+        <h5>Training &amp; facilitation</h5>
+        <p>Delivered live cybersecurity awareness training to small businesses across Africa, two years running, in partnership with EY.</p>
+      </div>
+      <div class="non-card">
+        <h5>Cross-functional trust</h5>
+        <p>Partners with fraud, HR and IT teams on investigations and offboarding gaps — the connective tissue between security and the rest of the business.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section id="experience">
+    <div class="eyebrow">03 — Experience</div>
+    <h2 class="section-title">Where the work happened</h2>
+
+    <div class="timeline">
+      <div class="role">
+        <div class="when"><span>Dec 2024 — Present</span><div class="status">● Current</div></div>
+        <div>
+          <h4>Cybersecurity Engineer <span>· Takealot</span></h4>
+          <div class="place">Remote</div>
+          <ul>
+            <li>Own the organisation's ISO 27001 information security management system end-to-end.</li>
+            <li>Build and maintain SIEM detection and monitoring capability across the security stack.</li>
+            <li>Develop and run phishing simulation and security awareness training programs.</li>
           </ul>
         </div>
       </div>
 
-      <div class="row portfolio-container">
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/dropit.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Parcel Delivery</h4>
-              <div class="portfolio-links">
-                <a href="https://github.com/Ihlaam/DropIT" target="_blank" title="Projects"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+      <div class="role">
+        <div class="when"><span>Apr 2024 — Present</span><div class="status">● Current</div></div>
+        <div>
+          <h4>Co-Founder / CISO <span>· Intact Line</span></h4>
+          <div class="place">Remote</div>
+          <ul>
+            <li>Own security strategy, architecture and governance for the company's product.</li>
+            <li>Lead secure development practice and CI/CD security across the engineering team.</li>
+            <li>Embed data protection by design into product and process decisions.</li>
+          </ul>
         </div>
+      </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/unidel.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-                <h4>Fleet Management</h4>
-              <div class="portfolio-links">
-                <a href="https://github.com/COS301-SE-2020/UNIDEL" target="_blank" title="Projects"><i class="bx bx-link"></i></a>  
-              </div>
-            </div>
-          </div>
+      <div class="role">
+        <div class="when">Jun 2023 — Mar 2024</div>
+        <div>
+          <h4>Senior IT Analyst <span>· PwC</span></h4>
+          <div class="place">Johannesburg</div>
+          <ul>
+            <li>Delivered IT control assurance and SOC 2 engagements for multinational clients.</li>
+            <li>Assessed client environments against ISO 27001 ahead of external audits.</li>
+            <li>Authored risk reports and remediation roadmaps for client audit committees.</li>
+          </ul>
         </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/project/facerec.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4>Face Recognition</h4>
-                <div class="portfolio-links">
-                  <a href="https://github.com/Ihlaam/Face-Recognition" target="_blank" title="Projects"><i class="bx bx-link"></i></a>  
-                </div>
-              </div>
-            </div>
-          </div>
- 
-
       </div>
-    </div>
-  </section>
 
-  <!-- End Project Section -->
-
-
-
-  <!-- Start Skills Section -->
-
-  <section id="skills" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Skills</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-12" data-aos="fade-up">
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="background:#fff">
-            <h4 style="text-align:left;color:#09203a">Languages and Databases</h4>
-                <p style="text-align:left;">
-                  <img src="https://www.vectorlogo.zone/logos/python/python-horizontal.svg" alt="vectorlogo.zone" height="50" width="150">
-                  <img src="https://www.vectorlogo.zone/logos/java/java-horizontal.svg" alt="vectorlogo.zone" height="50" width="120">
-                  <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="upload.wikimedia.org" height="60" width="90">
-                  <img src="https://www.vectorlogo.zone/logos/javascript/javascript-horizontal.svg" alt="upload.wikimedia.org" height="60" width="120">
-                  <img src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg" alt="vectorlogo.zone" height="70" width="130">
-                </p>
-            </div>
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#fff">
-              <h4 style="text-align:left;color:#09203a">Frameworks</h4>
-                <p style="text-align:left;">
-                  <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-horizontal.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/expressjs/expressjs-ar21.svg" alt="vectorlogo.zone">
-              </p>
-          </div>
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#fff">
-              <h4 style="text-align:left;color:#09203a">Tools</h4>
-                <p style="text-align:left;">
-                  <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/linux/linux-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/splunk/splunk-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/wireshark/wireshark-ar21.svg" alt="vectorlogo.zone">
-              </p>
-          </div>
+      <div class="role">
+        <div class="when">Jan 2022 — Jun 2023</div>
+        <div>
+          <h4>SOC Analyst <span>· Deloitte</span></h4>
+          <div class="place">Johannesburg</div>
+          <ul>
+            <li>Provided round-the-clock monitoring and incident triage for an enterprise client.</li>
+            <li>Performed detection engineering and threat hunting across SIEM platforms.</li>
+            <li>Authored SOC playbooks and escalation procedures adopted across shifts.</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- End Skills Section -->
+  <div class="vine-wrap">
+    <svg class="vine" viewBox="0 0 1200 44" preserveAspectRatio="none">
+      <line x1="0" y1="22" x2="1200" y2="22" stroke="currentColor" stroke-width="1" stroke-dasharray="2 6" opacity="0.5"/>
+      <g fill="none" stroke="currentColor" stroke-width="1.3">
+        <circle cx="150" cy="22" r="3" fill="currentColor" stroke="none"/>
+        <circle cx="700" cy="22" r="3" fill="currentColor" stroke="none"/>
+        <circle cx="1050" cy="22" r="3" fill="currentColor" stroke="none"/>
+        <path d="M150 22c8-8 6-16-2-18s-16 4-14 12 12 10 16 4"/>
+        <path d="M700 22c0 9 9 13 17 9" />
+      </g>
+    </svg>
+  </div>
 
-
-
-
-  <!-- Start Links section -->
-  <section id="links" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Resume</h2>
+  <!-- ================= EDUCATION & CERTS ================= -->
+  <section id="education">
+    <div class="eyebrow">04 — Education &amp; Certifications</div>
+    <div class="edu-grid">
+      <div>
+        <div class="edu-item">
+          <h4>MSc Computer Science</h4>
+          <div class="meta">University of Pretoria · 2025 — Present</div>
+          <div class="honors">Research focus: blockchain security</div>
+        </div>
+        <div class="edu-item">
+          <h4>BSc Honours, Computer Science</h4>
+          <div class="meta">University of Pretoria · 2021 — 2022</div>
+          <div class="honors">Golden Key International Honour Society</div>
+        </div>
+        <div class="edu-item">
+          <h4>BSc Information Technology</h4>
+          <div class="meta">University of Pretoria · 2018 — 2020</div>
+        </div>
       </div>
-      <div class="row">
-        <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-          <h4 class="title"><a href="./assets/Laam Resume 2024.pdf" target="_blank">Resume</a></h4>
+      <div class="cert-list">
+        <div class="cert">
+          <div><div class="name">Azure Security Engineer Associate</div><div class="issuer">Microsoft Certified</div></div>
+          <svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5.5-6"/></svg>
+        </div>
+        <div class="cert">
+          <div><div class="name">Cybersecurity Professional Certificate</div><div class="issuer">Google</div></div>
+          <svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5.5-6"/></svg>
+        </div>
+        <div class="cert">
+          <div><div class="name">Cyber Threat Intelligence</div><div class="issuer">arcX</div></div>
+          <svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5.5-6"/></svg>
         </div>
       </div>
     </div>
-  </section> <!--End Links Section -->
-
-
-  <!-- Start Contact Section -->
-
-  <section id="contacts" class="contact">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Contact</h2>
-      </div>
-
-      <div class="row mt-2">
-
-        <div class="col-md-6 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-map"></i>
-            <h3>Location</h3>
-            <p>Johannesburg</p>
-            <p>South Africa</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-share-alt"></i>
-            <h3>Socials</h3>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/ihlaam-abrahams-2191741a5" target="_blank" class="linkedin">
-                <div class="icon-box">
-                    <i class="ri-linkedin-fill" style="font-size: 27px;"></i>
-                </div>
-              </a>
-              <a href="https://www.github.com/Ihlaam" target="_blank" class="github">
-                <div class="icon-box">
-                    <i class="ri-github-fill" style="font-size: 27px;"></i>
-                </div>
-             </a>
-              <a href="https://medium.com/@ihlaamabr" target="_blank" class="medium">
-                <div class="icon-box">
-                    <i class="ri-medium-fill" style="font-size: 27px;"></i>
-                </div>
-             </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-envelope"></i>
-            <h3>Email</h3>
-            <p>ihlaamabr@gmail.com</p>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-phone-call"></i>
-            <h3>Contact</h3>
-            <p>+27 61 787 6365</p>
-          </div>
-        </div>
-      </div>
   </section>
 
-  <!-- End Contact Section -->
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script type="text/javascript">
-    var typed = new Typed('.typing',{
-      strings: ["Cybersecurity", "Software Development", "Education"],
-      loop: true,
-      typeSpeed: 65,
-      backSpeed: 65
-    });
-  </script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <footer id="contact">
+    <div class="eyebrow">05 — Contact</div>
+    <div class="big">Building a security<br>program? Let's <a href="mailto:ihlaamabr@gmail.com">talk</a>.</div>
+    <div class="contact-grid">
+      <div><div class="c-label">Email</div><a class="c-val" href="mailto:ihlaamabr@gmail.com">ihlaamabr@gmail.com</a></div>
+      <div><div class="c-label">LinkedIn</div><a class="c-val" href="https://www.linkedin.com/in/ihlaam-abrahams-2191741a5" target="_blank" rel="noopener">ihlaam-abrahams</a></div>
+    </div>
+    <div class="fine">
+      <span>Ihlaam Abrahams — Gauteng, South Africa</span>
+    </div>
+  </footer>
+</main>
 </body>
-
 </html>
